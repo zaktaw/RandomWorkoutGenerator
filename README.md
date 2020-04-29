@@ -4,7 +4,7 @@
 How to open:
 
 Download and extract zip package.
-Run Generator file (requires Python to be installed on computer).
+Run Generator.py (requires Python to be installed on computer).
 
 How to use:
 
