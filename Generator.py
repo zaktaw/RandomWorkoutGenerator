@@ -1,5 +1,7 @@
 from tkinter.filedialog import askopenfilename
 
-askopenfilename()
+file_name = askopenfilename()
+file_content = open(file_name,"r")
 
-##file = open(filename,"r") #Opens the file containing the chatlog
+for line in file_content:
+    print(line)
