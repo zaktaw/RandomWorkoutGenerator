@@ -6,13 +6,12 @@ import os
 root = tk.Tk()
 root.withdraw()
 root.wm_attributes('-topmost', 1)
-defaultDirectory = os.getcwd() + "/Example workouts"
 
 exercises = []
 
 input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout\n')
 
-file_name = askopenfilename(initialdir = defaultDirectory)
+file_name = askopenfilename(initialdir = os.getcwd() + '\Example workouts')
 file_content = open(file_name,"r")
 
 def addExercise(inputExercise):
