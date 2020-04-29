@@ -22,4 +22,9 @@ def addExercise(inputExercise):
 for exe in file_content:
     addExercise(exe)
 
-print(exercises)
+def startWorkout():
+  random.shuffle(exercises)
+  for exercise in exercises:
+      input(exercise[0] + ': ' + str(random.randint(exercise[1],exercise[2])))
+      
+startWorkout()
