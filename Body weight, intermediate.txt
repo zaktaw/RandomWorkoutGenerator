@@ -1,0 +1,6 @@
+Pull-ups;3;5;8
+Wide grip push-ups;3;8;12
+Straight bar dips;3;5;8
+Pistol squats;3;5;12
+Calf raises;3;10;12
+Abs circuit (knee raises, plank out, side plank);3;1;1
