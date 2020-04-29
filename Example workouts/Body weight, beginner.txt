@@ -1,0 +1,6 @@
+Australian pull-ups;3;5;8
+Push-ups;3;8;12
+Dips;3;3;8
+Squats;3;10;15
+Calf raises;3;10;12
+Sit-ups;3;10;20
