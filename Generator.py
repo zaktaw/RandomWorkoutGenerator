@@ -1,16 +1,18 @@
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
 import random
+import os
 
 root = tk.Tk()
 root.withdraw()
 root.wm_attributes('-topmost', 1)
+defaultDirectory = os.getcwd() + "/Example workouts"
 
 exercises = []
 
-input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout')
+input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout\n')
 
-file_name = askopenfilename()
+file_name = askopenfilename(initialdir = defaultDirectory)
 file_content = open(file_name,"r")
 
 def addExercise(inputExercise):
