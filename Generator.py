@@ -1,6 +1,5 @@
-import _tkinter
-import tkinter
+from tkinter.filedialog import askopenfilename
 
-tkinter._test()
+askopenfilename()
 
 ##file = open(filename,"r") #Opens the file containing the chatlog
