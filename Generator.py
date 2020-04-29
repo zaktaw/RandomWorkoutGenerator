@@ -8,11 +8,10 @@ root.wm_attributes('-topmost', 1)
 
 exercises = []
 
-input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout\n')
+input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout')
 
 file_name = askopenfilename()
 file_content = open(file_name,"r")
-##File shold close after it is read
 
 def addExercise(inputExercise):
     inputExercise = inputExercise.split(';')
