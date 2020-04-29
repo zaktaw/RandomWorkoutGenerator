@@ -1,9 +1,15 @@
+import tkinter as tk
 from tkinter.filedialog import askopenfilename
 import random
 
+root = tk.Tk()
+root.withdraw()
+root.wm_attributes('-topmost', 1)
+
 exercises = []
 
-##tkinter window should close
+input('Welcome to RandomWorkoutGenerator! Press "enter" to open file chooser and choose a workout\n')
+
 file_name = askopenfilename()
 file_content = open(file_name,"r")
 ##File shold close after it is read
@@ -26,6 +32,6 @@ def startWorkout():
     random.shuffle(exercises)
     for exercise in exercises:
         input(exercise[0] + ': ' + str(random.randint(exercise[1],exercise[2])))   
-    input('Workout finished. Good job!')
+    input('\nWorkout finished. Good job!')
 
 startWorkout()
