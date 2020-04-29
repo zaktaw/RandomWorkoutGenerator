@@ -2,7 +2,11 @@ from tkinter.filedialog import askopenfilename
 import random
 
 exercises = []
-userInput = ''
+
+##tkinter window should close
+file_name = askopenfilename()
+file_content = open(file_name,"r")
+##File shold close after it is read
 
 def addExercise(inputExercise):
     inputExercise = inputExercise.split(';')
@@ -15,21 +19,13 @@ def addExercise(inputExercise):
     for x in range(0,exercise_sets):
         exercises.append(exercise)
 
-
+for exe in file_content:
+    addExercise(exe)
 
 def startWorkout():
-    ##tkinter window should close
-    file_name = askopenfilename()
-    file_content = open(file_name,"r")
-    for exe in file_content:
-        addExercise(exe)
-    ##File shold close after it is read
     random.shuffle(exercises)
     for exercise in exercises:
-        input(exercise[0] + ': ' + str(random.randint(exercise[1],exercise[2])))
-    
+        input(exercise[0] + ': ' + str(random.randint(exercise[1],exercise[2])))   
+    input('Workout finished. Good job!')
 
-
-while userInput != 'esc':
-    startWorkout()  
-    userInput = input('Workout finished. Good job! Type "esc" to exit')
+startWorkout()
